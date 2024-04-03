@@ -10,7 +10,7 @@ import (
 
 var buttons = tgbotapi.NewReplyKeyboard(
 	tgbotapi.NewKeyboardButtonRow(
-		tgbotapi.NewKeyboardButton("Как скачать приложение"),
+		tgbotapi.NewKeyboardButton("Где скачать приложение"),
 		tgbotapi.NewKeyboardButton("У меня проблема"),
 	),
 )
@@ -28,8 +28,8 @@ func SendMsg(bot *tgbotapi.BotAPI, updates tgbotapi.UpdatesChannel) {
 			msg.ReplyMarkup = buttons
 		}
 
-		if update.Message.Text == "Как скачать приложение" {
-			msg.Text = "никак"
+		if update.Message.Text == "Где скачать приложение" {
+			msg.Text = "В google play"
 		}
 
 		if update.Message.Text == "У меня проблема" {
